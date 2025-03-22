@@ -1,22 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa; /* 차분한 라이트 그레이 배경 */
+  color: #ffffff;
+  background-color: #001f3f; /* 남색 배경 */
 }
 
 /* 헤더 및 네비게이션 */
 header {
-  background: #ffffff;
+  background: #001f3f;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+.header-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+  
+.header-title h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.header-title small {
+    display: block;
+    font-size: 0.8rem;
+    color: #b0c4de;
+    margin-top: 4px;
+}
+  
 
 header nav ul {
   list-style: none;
@@ -32,48 +50,51 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #0056b3; /* 세련된 블루 계열 */
+  color: #ffffff; /* 흰색 텍스트 */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #003f7f;
+  color: #b0c4de;
 }
 
-/* 히어로 섹션 */
-#hero {
-  background: linear-gradient(135deg, #e2e8f0, #ffffff); /* 부드러운 그라데이션 */
-  height: 60vh;
+/* 프로필 섹션 */
+.profile-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #333;
+  justify-content: center;
+  gap: 40px; /* 사진과 텍스트 사이 간격 */
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin: 0;
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.hero-content h2 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #555;
+.profile-text {
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* 각 섹션 스타일 */
 section {
   padding: 60px 20px;
-  background: #ffffff;
+  background: #001f3f;
   margin-bottom: 20px;
+  scroll-margin-top: 80px;
 }
 
 section h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #0056b3;
+  color: #ffffff;
 }
 
 section ul {
@@ -84,19 +105,54 @@ section ul {
 }
 
 section ul li {
-  background: #ffffff;
+  background: #00264d; /* 섹션 카드용 조금 밝은 남색 */
   margin-bottom: 15px;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+  border: 1px solid #003366;
+  color: #ffffff;
 }
 
 /* 푸터 */
 footer {
-  background: #343a40;
-  color: #fff;
+  background: #001f3f;
+  color: #ffffff;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+
+/* 아코디언 스타일 */
+.accordion-item {
+  border-bottom: 1px solid #003366;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 12px;
+  background-color: #00264d;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+
+.accordion-header:hover {
+  background-color: #003366;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px;
+  background-color: #001f3f;
+  color: #ffffff;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }

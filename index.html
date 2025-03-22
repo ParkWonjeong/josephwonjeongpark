@@ -9,6 +9,10 @@
 <body>
   <!-- 헤더 및 네비게이션 -->
   <header>
+    <div class="header-title">
+      <h1>Joseph Wonjeong Park</h1>
+      <small>박원정</small>
+    </div>
     <nav>
       <ul>
         <li><a href="#about">소개</a></li>
@@ -19,35 +23,50 @@
       </ul>
     </nav>
   </header>
+  
 
   <!-- 소개 섹션 -->
   <section id="about">
     <h2>소개</h2>
-    <p>
-      안녕하세요, 저는 박원정 (Joseph Won Jeong Park)입니다. 데이터의 정확성과 보안 및 처리에 중점을 둔 데이터 최적화 및 머신러닝 전문가를 목표로 하고 있습니다. 머신러닝, SQL 데이터베이스 관리 및 프로세스 최적화 경험을 바탕으로, 데이터 기반 의사결정을 지원하며 혁신적인 솔루션 개발에 열정을 가지고 있습니다.
-    </p>
-    <p>
-      한국외국어대학교에서 영미문학문화학과, AI 융합전공을 이중전공하는 학생입니다.
-      UC Berkeley에서의 교환학생 경험과 다양한 팀 프로젝트를 통해 협업 및 문제 해결 능력을 키웠으며, 특히 QMS와 GDSC 활동을 통해 데이터 분석과 컴퓨터 과학, 머신러닝에 대한 깊은 이해를 쌓았습니다.
-    </p>
+    <div class="profile-container">
+      <img src="assets/profile.jpg" alt="프로필 사진" class="profile-photo">
+      <div class="profile-text">
+        <p>
+          안녕하세요, 배움과 성장에 관심이 많은 박원정 (Joseph Won Jeong Park)입니다. <br>
+          데이터 최적화 및 머신러닝 전문가를 꿈꾸는 학생입니다. <br>
+          머신러닝, SQL 데이터베이스 관리 및 프로세스 최적화 경험을 바탕으로, 데이터 기반 의사결정을 지원하며 혁신적인 솔루션 개발에 열정을 가지고 있습니다.
+        </p>
+        <p>
+          한국외국어대학교에서 영미문학문화학과와 AI 융합전공을 이중전공 중이며, 현재 UC Berkeley 교환학생으로 참여 중입니다.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- 경력 섹션 -->
   <section id="experience">
     <h2>경력</h2>
-    <ul>
-      <li>
-        <h3>Lotte Cinema - 고객 서비스 및 운영 지원 (파트타임)</h3>
-        <p>2021.08 ~ 2022.08</p>
-        <p>고객 응대 및 업무 프로세스 최적화를 통해 서비스 품질 향상에 기여.</p>
-      </li>
-      <li>
-        <h3>Hankuk University of Foreign Studies - Teaching Assistant (TA)</h3>
-        <p>2023.03 ~ 2023.08</p>
-        <p>R을 활용한 통계 분석 및 데이터 처리 과목 지원, 학생 프로젝트 지도.</p>
-      </li>
-    </ul>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">Lotte Cinema - 고객 서비스 및 운영 지원 (파트타임)</div>
+        <div class="accordion-content">
+          <p>2021.08 ~ 2022.08</p>
+          <p>고객 응대 및 업무 프로세스 최적화를 통해 서비스 품질 향상에 기여.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Hankuk University of Foreign Studies - Teaching Assistant (TA)</div>
+        <div class="accordion-content">
+          <p>2023.03 ~ 2023.08</p>
+          <p>
+            "마케팅 사이언스 입문" 과목 <br>
+            R을 활용한 통계 분석 및 데이터 처리 관련 학생 실습 지도.
+        </p>
+        </div>
+      </div>
+    </div>
   </section>
+  
 
   <!-- 수상내역 섹션 -->
   <section id="awards">

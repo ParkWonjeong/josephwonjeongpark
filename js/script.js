@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Smooth Scrolling
     const links = document.querySelectorAll('header nav ul li a');
-    
+
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            if(targetSection){
+            if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Accordion Logic
     const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
+
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
             const content = header.nextElementSibling;
-            
+
             // Toggle current item
             item.classList.toggle('active');
-            
+
             if (item.classList.contains('active')) {
                 content.style.maxHeight = content.scrollHeight + "px";
             } else {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -72,4 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
 });
